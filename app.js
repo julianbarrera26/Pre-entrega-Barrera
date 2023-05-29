@@ -44,3 +44,64 @@ for (let i = 1; i < 13; i++) {
     let resultado = precio / i;
     console.log (`${precio} / ${i} = ${resultado} `)
 }
+
+const propiedad = [
+    {titulo: "Departamento PLENO CENTRO",
+    ubicacion: "obispo trejo 500",
+    precio: 2000000},
+    {titulo: "Departamento con Balcon",
+    ubicacion: "independencia 100",
+    precio: 3000000},
+    {titulo: "Departamento BARRIO CENTRO",
+    ubicacion: "colon 245",
+    precio: 2000000},
+    {titulo: "Departamento GRAL PAZ",
+    ubicacion: "24 de septiembre 250",
+    precio: 4500000}
+]
+
+const filtrado = propiedad.filter((p) => p.precio === 2000000)
+
+console.log (filtrado)
+
+function solPropietario(nombre, apellido, documento) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.documento = documento;
+    this.clave = function (params) {
+        console.log (this.documento + "1234")
+    }
+
+}
+
+let propietario1 = new solPropietario ("julian", "perez", 45625874)
+
+console.log(propietario1)
+
+propietario1.clave()
+
+const elementosMuebles = [ "inodoro", "lavatorio", "cocina", "ventilador"]
+
+console.log(elementosMuebles)
+
+const muebles = [];
+let   cantidad = 10;
+
+do{
+    let entrada = prompt("Ingresar maximo 10 artefactos del inmuebles");
+    muebles.push(entrada.toUpperCase());
+    console.log(muebles.length);}
+
+    while(muebles.length != cantidad)
+
+const nuevaLista = muebles.concat(["vanitory","cocina", "termotanque", "bajomesada", "ventilador"]);
+
+console.log(nuevaLista.join("\n"));
+
+
+for (let index = 0; index < elementosMuebles.length; index++) {
+    alert (elementosMuebles[index]);
+    
+}
+
+
